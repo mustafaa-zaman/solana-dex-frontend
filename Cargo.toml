@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "programs/my_dex_project",
+    "programs/yield_farm",
+]
+
+[profile.release]
+lto = true
+codegen-units = 1
+overflow-checks = true
+debug = true
+
+[patch.crates-io]
+spl-token-2022 = { git = "https://github.com/solana-labs/solana-program-library", branch = "master" }

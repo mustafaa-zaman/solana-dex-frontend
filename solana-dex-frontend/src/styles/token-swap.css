@@ -1,0 +1,263 @@
+/* Token Swap Styles */
+.token-swap-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  margin-top: 20px;
+}
+
+.token-swap {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 360px; /* Reduced width */
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px; /* Match token swap width */
+  margin-bottom: 10px; /* Adjusted spacing */
+}
+
+.slippage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slippage-label {
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.slippage-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slippage-value {
+  font-size: 1rem;
+}
+
+.cog-icon {
+  cursor: pointer;
+  font-size: 1rem; /* Adjusted size */
+}
+
+.token-swap label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.token-swap-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.token-swap-input .input-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dropdown-container {
+  position: relative;
+  flex: 1;
+}
+
+.dropdown-selected {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.amount-input {
+  width: 100px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.flip-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.flip-button {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.token-swap button {
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.price-chart {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid;
+}
+
+.refresh-icon {
+  cursor: pointer;
+  font-size: 1rem; /* Adjusted size */
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+/* Dark Mode Specific Styles */
+body.dark .token-swap {
+  background-color: #1f1f1f;
+}
+
+body.dark .slippage-label,
+body.dark .slippage-value,
+body.dark .token-swap label,
+body.dark .dropdown-selected,
+body.dark .dropdown-item,
+body.dark .amount-input,
+body.dark .price-token,
+body.dark .price-value {
+  color: #b3b3b3;
+}
+
+body.dark .dropdown-selected,
+body.dark .amount-input {
+  background-color: #121212;
+  border: 1px solid #333;
+}
+
+body.dark .dropdown-menu {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+body.dark .flip-button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .flip-button:hover {
+  background-color: #555;
+}
+
+body.dark .token-swap button {
+  background-color: #1db954;
+  color: white;
+}
+
+body.dark .token-swap button:hover {
+  background-color: #1ed760;
+}
+
+body.dark .price-chart {
+  border-top: 1px solid #333;
+}
+
+body.dark .refresh-icon {
+  color: #1db954;
+}
+
+/* Light Mode Specific Styles */
+body.light .token-swap {
+  background: linear-gradient(135deg, #1de9b6, #8e24aa) !important; /* Turquoise to purple gradient */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for depth */
+}
+
+body.light .slippage-label,
+body.light .slippage-value,
+body.light .token-swap label,
+body.light .dropdown-selected,
+body.light .dropdown-item,
+body.light .amount-input,
+body.light .price-token,
+body.light .price-value {
+  color: #333333; /* Dark text color */
+}
+
+body.light .dropdown-selected,
+body.light .amount-input {
+  background: linear-gradient(135deg, #1de9b6, #8e24aa); /* Turquoise to purple gradient */
+  border: 1px solid #cccccc; /* Lighter border */
+}
+
+body.light .dropdown-menu {
+  background: linear-gradient(135deg, #1de9b6, #8e24aa); /* Turquoise to purple gradient */
+  border: 1px solid #cccccc; /* Lighter border */
+}
+
+body.light .dropdown-item {
+  background: linear-gradient(135deg, #1de9b6, #8e24aa); /* Turquoise to purple gradient */
+}
+
+body.light .flip-button {
+  background-color: #cccccc; /* Light grey background */
+  color: #333333; /* Dark text color */
+}
+
+body.light .flip-button:hover {
+  background-color: #aaaaaa; /* Slightly darker grey */
+}
+
+body.light .token-swap button {
+  background-color: #1e88e5; /* Bright blue */
+  color: white;
+}
+
+body.light .token-swap button:hover {
+  background-color: #1976d2; /* Slightly darker blue */
+}
+
+body.light .price-chart {
+  border-top: 1px solid #cccccc; /* Lighter border */
+}
+
+body.light .refresh-icon {
+  color: #000000; /* Black color in light mode */
+}
